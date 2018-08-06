@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QWebKitDemo</title>
+    <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script type="text/javascript">
+	function output(message)
+	{
+		var output = document.getElementById("output");
+		output.innerHTML = output.innerHTML + message + "\n";
+	}
+	
+	window.onload = function(){
+		output("");
+		new QWebChannel(qt.webChannelTransport, function(channel){
+			var interactobj = channel.objects.interactobj;
+			/*var res = "";
+			var ob = eval(interactobj);
+			for(var p in ob) {
+				res = p;
+				output(res);
+			}
+			res = interactobj.__id__;
+			output(res);*/
+			interactobj.SigSendMsgToJS.connect(function(message) {
+				
+				var log_info = "对象["+interactobj.__id__+"]的属性值为: "+message;
+				interactobj.log(log_info);
+			})
+			interactobj.SigSendMsgReadbyJS.connect(function(message) {
+				
+				var info = "读取属性值: "+message;
+				output(info);
+			})
+			document.getElementById("Read").onclick = function() {
+				interactobj.GetReadMsg();
+			}
+			document.getElementById("Change").onclick = function() {
+				var input = document.getElementById("input");
+				if(!input.value) {
+					return;
+				}
+				//var cur_msg = interactobj.GetPropMsg();
+				
+				interactobj.GetPropMsg();
+				interactobj.JSSendMsg(input.value);
+				//var info = "修改对象["+interactobj.__id__+"]的属性";
+				//interactobj.log(info);
+				interactobj.GetPropMsg();
+				
+				input.value = "";
+			}
+		});
+	}
+	  
+    </script>
+	<style type="text/css">
+		html {
+			height: 100%;
+			width: 100%;
+		}
+		#input {
+			width: 200px;
+			margin: 0 10px 0 0;
+		}
+		#Change {
+			width: 90px;
+			margin: 0;
+		}
+		#Read {
+			width: 90px;
+			margin: 0;
+		}
+		#output {
+			width: 600px;
+			height: 200px;
+		}
+	</style>
+  </head>
+  <body>
+	<textarea id="output" readonly="readonly"></textarea> 
+    <input id="input" />
+    <input type="button" id="Change" value="Change" onclick="javascript:click();"/>
+	<input type= "button" id="Read" value="Read" onclick="javascript:click();"/>
+  </body>
+</html>

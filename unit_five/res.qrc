@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="background">res/background.png</file>
+        <file alias="pinwheel">res/pinwheel.png</file>
+        <file alias="pole">res/pole.png</file>
+    </qresource>
+</RCC>
