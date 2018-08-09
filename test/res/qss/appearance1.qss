@@ -1,0 +1,545 @@
+QMainWindow
+{
+	background-image: url(:/img/skin/17_big_p);
+}
+/*第一行，标题和窗口按钮*/
+#label_title
+{
+	color:white;
+	font: 10pt "Javanese Text";
+}
+#pushButton_medal
+{
+	border:none;
+	background-image: url(:/img/contentWidget/medal_light_p);
+	image-position:top;
+}
+#pushButton_skin
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/skin_button_n_p);
+}
+#pushButton_skin:hover
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/skin_button_h_p);
+}
+#pushButton_skin:pressed
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/skin_button_p_p);
+}
+#pushButton_mainmenu
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/main_menu_n_p);
+}
+#pushButton_mainmenu:hover
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/main_menu_h_p);
+}
+#pushButton_mainmenu:pressed
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/main_menu_p_p);
+}
+#pushButton_mainmenu::menu-indicator
+{
+	subcontrol-position:right center;
+	subcontrol-origin:padding;
+	padding-right:3px;
+	image:none;
+}
+#pushButton_min
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/min_button_n_p);
+}
+#pushButton_min:hover
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/min_button_h_p);
+}
+#pushButton_min:pressed
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/min_button_p_p);
+}
+#pushButton_max
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/max_button_n_p);
+}
+#pushButton_max:hover
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/max_button_h_p);
+}
+#pushButton_max:pressed
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/max_button_p_p);
+}
+#pushButton_close
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/close_button_n_p);
+}
+#pushButton_close:hover
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/close_button_h_p);
+}
+#pushButton_close:pressed
+{
+	/*background:transparent;*/
+	border-image: url(:/img/sysButton/close_button_p_p);
+}
+/*第二行，主要功能和logo*/
+#toolButton_dntj
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/tiJian_p);
+	image-position:top;
+}
+#toolButton_dntj:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_dntj:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+
+#toolButton_mmcs
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/muMa_p);
+	image-position:top;
+}
+#toolButton_mmcs:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_mmcs:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_ldxf
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/louDong_p);
+	image-position:top;
+}
+#toolButton_ldxf:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_ldxf:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_xtxf
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/xiTong_p);
+	image-position:top;
+}
+#toolButton_xtxf:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_xtxf:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_dnql
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/qingLi_p);
+	image-position:top;
+}
+#toolButton_dnql:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_dnql:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_yhjs
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/jiaSu_p);
+	image-position:top;
+}
+#toolButton_yhjs:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_yhjs:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_dnzj
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/menZhen_p);
+	image-position:top;
+}
+#toolButton_dnzj:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_dnzj:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_rjgj
+{
+	border:none;
+	background:transparent;
+	color:rgb(230,230,230);
+	font: 10pt "Javanese Text";
+	image: url(:/img/toolWidget/ranJian_p);
+	image-position:top;
+}
+#toolButton_rjgj:hover
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#toolButton_rjgj:pressed
+{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(230, 230, 230, 100));
+}
+#label_logo
+{
+	border:none;
+	image: url(:/img/logo/logo_p);
+}
+/*第三行，左区，功能详情*/
+#widget_left
+{
+	background-color:white;
+	border:none;
+}
+#label_power
+{
+	border:none;
+	image: url(:/img/contentWidget/computer_p)
+}
+#label_tjt1
+{
+	color:gray;
+	font: 75 20pt "Javanese Text";
+}
+#label_tjt2
+{
+	color:gray;
+	font: 10pt "Javanese Text";
+}
+#pushButton_power
+{
+	image:url(:/img/contentWidget/power_p);
+	image-position:left;
+	padding-left:15px;
+	border-radius:5px;
+	background:rgb(110,190,10);
+	color:white;
+	font: 75 16pt "Javanese Text";
+}
+#pushButton_power:hover
+{
+	background:rgb(140,220,35);
+}
+#line_v1
+{
+	background-color:lightgray;
+	border:none;
+}
+#widget_right
+{
+	background-color:rgb(250,250,250);
+	border:none;
+}
+/*第三行，右区，第1块，登陆块*/
+#widget_login
+{
+	background-color:rgb(250,250,250);
+	border:none;
+}
+#pushButton_login
+{
+	color:green;
+	font: 10pt "Javanese Text";
+	border-image: url(:/img/contentWidget/login_p);
+	background:transparent;
+}
+#pushButton_login:hover
+{
+	color:rgb(110, 190, 10);
+	font: 10pt "Javanese Text";
+}
+#label_priv
+{
+	border:none;
+	background:transparent;
+	image: url(:/img/contentWidget/priv_p);
+}
+#pushButton_regist
+{
+	color:rgb(0, 120, 230); 
+	font: 10pt "Javanese Text";
+	background:transparent;
+}
+#label_privpower
+{
+	font: 10pt "Javanese Text";
+}
+#pushButton_safe
+{
+	border-image: url(:/img/contentWidget/360_p);
+	background:transparent;
+}
+#pushButton_tab
+{
+	border-image: url(:/img/contentWidget/tab_p);
+	background:transparent;
+}
+#pushButton_pet
+{
+	border-image: url(:/img/contentWidget/pet_p);
+	background:transparent;
+}
+#pushButton_lottery
+{
+	border-image: url(:/img/contentWidget/lottery_p);
+	background:transparent;
+}
+#pushButton_cloud5
+{
+	border-image: url(:/img/contentWidget/cloud_five_p);
+	background:transparent;
+}
+#pushButton_caipiao
+{
+	border-image: url(:/img/contentWidget/caipiao_p);
+	background:transparent;
+}
+#line_h1
+{
+	background-color:lightgray;
+	border:none;
+}
+/*第三行，右区，第2块，使用功能块*/
+#toolButton_fireproof
+{
+	border:none;
+	background:transparent;
+	image: url(:/img/contentWidget/fireproof_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#line_v2
+{
+	background-color:lightgray;
+	border:none;
+}
+#toolButton_triggerman
+{
+	border:none;
+	background:transparent;
+	image: url(:/img/contentWidget/triggerman_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#line_v3
+{
+	background-color:lightgray;
+	border:none;
+}
+#toolButton_netshop
+{
+	border:none;
+	background:transparent;
+	image: url(:/img/contentWidget/net_shop_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#line_h2
+{
+	background-color:lightgray;
+	border:none;
+}
+/*第三行，右区，第3块，更多功能块*/
+#label_morefunc
+{
+	color:green;
+	font: 10pt "Javanese Text";
+}
+#pushButton_morefunc
+{
+	color:rgb(0, 120, 230);
+	background:transparent;
+	font: 10pt "Javanese Text";
+}
+#pushButton_morefunc:hover
+{
+	color:rgb(100, 190, 250);
+}
+#toolButton_recover
+{
+	background:transparent;
+	image: url(:/img/contentWidget/recover_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_recover:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_mobile
+{
+	background:transparent;
+	image: url(:/img/contentWidget/mobile_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_mobile:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_gamebox
+{
+	background:transparent;
+	image: url(:/img/contentWidget/game_box_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_gamebox:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_desktop
+{
+	background:transparent;
+	image: url(:/img/contentWidget/desktop_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_desktop:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_repair
+{
+	background:transparent;
+	image: url(:/img/contentWidget/repair_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_repair:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_autorun
+{
+	background:transparent;
+	image: url(:/img/contentWidget/auto_run_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_autorun:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_netspeed
+{
+	background:transparent;
+	image: url(:/img/contentWidget/net_speed_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_netspeed:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_netpretext
+{
+	background:transparent;
+	image: url(:/img/contentWidget/net_pretext_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_netpretext:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#toolButton_firstadd
+{
+	background:transparent;
+	image: url(:/img/contentWidget/first_add_p);
+	image-position:top;
+	font: 10pt "Javanese Text";
+}
+#toolButton_firstadd:hover
+{
+	border-radius:5px; 
+	border:1px solid rgb(210, 225, 230);
+}
+#line_h3
+{
+	background-color:lightgray;
+	border:none;
+}
+/*第三行，右区，第4块，云及版本*/
+#label_cloud
+{
+	border:none;
+	background:transparent;
+	image: url(:/img/contentWidget/cloud_p);
+}
+#label_connection
+{
+	font: 10pt "Javanese Text";
+}
+#label_version
+{
+	font: 10pt "Javanese Text";
+}
+#pushButton_update
+{
+	/*border:none;*/
+	background:transparent;
+	image: url(:/img/contentWidget/version_p);
+}

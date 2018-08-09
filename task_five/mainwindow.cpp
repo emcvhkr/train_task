@@ -1,5 +1,6 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 //
 //PUBLIC
@@ -10,10 +11,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     is_loaded = false;
-    ui->textEdit_code->setReadOnly(true);
     ui->textEdit_output->setReadOnly(true);
     connect(ui->pushButton_open,SIGNAL(clicked()),this,SLOT(open_file()));
     connect(ui->pushButton_run,SIGNAL(clicked()),this,SLOT(run_js()));
+
+    Interactobj = new InteractObj(this);
+    Webchannel = new QWebChannel(this);
+    Interactobj->setMsg("AAA");
+    JSWebview = new QWebEngineView(ui->widget_code);
+    JSWebview->page()->setWebChannel(Webchannel);
+    Webchannel->registerObject("interactobj",Interactobj);
+
+
+    connect(Interactobj,SIGNAL(getMsgChanged()),this,SLOT(getOprafromJS()));
+    connect(Interactobj,SIGNAL(SigSendLogToQt(QString)),this,SLOT(getLogfromJS(QString)));
 }
 
 MainWindow::~MainWindow()
@@ -29,39 +40,27 @@ void MainWindow::write_log(QString log_info)
     ui->textEdit_output->append(log_info);
 }
 //读取JS文件
-void MainWindow::load_file(QString filename)
+void MainWindow::load_file(QString file)
 {
-    QFile jsfile(filename);
+    QFile jsfile(file);
     if(!jsfile.open(QFile::ReadOnly|QFile::Text))
     {
-        QString log_info = QString::fromLocal8Bit("无法打开文件 ")+filename;
+        QString log_info = QString::fromLocal8Bit("无法打开文件 ")+file;
         write_log(log_info);
     }
     else
     {
-        QTextStream file_in(&jsfile);
-        code = file_in.readAll();
-        ui->textEdit_code->setText(code);
         is_loaded = true;
         jsfile.close();
-        QString log_info = QString::fromLocal8Bit("成功打开文件 ")+filename;
+        QString log_info = QString::fromLocal8Bit("成功打开文件 ")+file;
         write_log(log_info);
     }
 }
 //运行JS代码
-void MainWindow::run_engine(QString code)
+void MainWindow::run_engine()
 {
-    evaluate_result = JSengine.evaluate(code,,1);
-    if(!JSengine.hasUncaughtException())
-    {
-        QString log_info = QString::fromLocal8Bit("运行完成,结果为:  ")+evaluate_result.toString();
-        write_log(log_info);
-    }
-    else
-    {
-        QString log_info = QString::fromLocal8Bit("运行出错,因为：  ")+JSengine.uncaughtException().toString();
-        write_log(log_info);
-    }
+    JSWebview->page()->load(filename);
+    JSWebview->show();
 }
 //
 //PRIVATE SLOTS
@@ -69,7 +68,7 @@ void MainWindow::run_engine(QString code)
 //打开JS文件
 void MainWindow::open_file()
 {
-    QString filename = QFileDialog::getOpenFileName(this,tr("Open File"));
+    filename = QFileDialog::getOpenFileName(this,tr("Open File"));
     if(!filename.isEmpty())
     {
         load_file(filename);
@@ -85,6 +84,17 @@ void MainWindow::run_js()
     }
     else
     {
-        run_engine(code);
+        run_engine();
     }
+}
+
+void MainWindow::getOprafromJS()
+{
+    QString info = QString::fromLocal8Bit("JS操作,字符变为: ") + Interactobj->getMsg();
+    write_log(info);
+}
+void MainWindow::getLogfromJS(QString log_info)
+{
+    QString info = QString::fromLocal8Bit("来自JS:")+log_info;
+    write_log(info);
 }

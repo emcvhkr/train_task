@@ -1,0 +1,7 @@
+QPushButton#pushButton_mainmenu::menu-indicator
+{
+	subcontrol-position:right center;
+	subcontrol-origin:padding;
+        padding-right:3px;
+	image:none;
+}

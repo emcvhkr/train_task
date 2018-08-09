@@ -37,16 +37,6 @@
      <string>Output:</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_code">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>660</width>
-      <height>350</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -84,6 +74,16 @@
     </property>
     <property name="text">
      <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_code" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>660</width>
+      <height>350</height>
+     </rect>
     </property>
    </widget>
   </widget>

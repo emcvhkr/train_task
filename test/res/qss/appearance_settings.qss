@@ -1,0 +1,31 @@
+QDialog
+{
+	background-image: url(:/img/skin/17_big_p);
+}
+#label_360t
+{
+	color:white;
+}
+#pushButton_close_ds
+{
+	background:transparent;
+	image: url(:/img/sysButton/close_button_n_p);
+}
+#pushButton_close_ds:hover
+{
+	background:transparent;
+	image: url(:/img/sysButton/close_button_h_p);
+}
+#pushButton_close_ds:pressed
+{
+	background:transparent;
+	image: url(:/img/sysButton/close_button_p_p);
+}
+#widget_content
+{
+	background-color:white;
+}
+QGroupBox
+{
+	color:green;
+}
